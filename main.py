@@ -6,22 +6,13 @@ Licence: GPLv3
 """
 
 import turtle
+import units
 
 
 def main():
     """ Main program function, Draws silhouette"""
     charles = turtle.Turtle()
     screen = charles.screen
-
-
-def vunits2px(scrn, units):
-    """ Returns the px's for a vertical unit (25ths of height)"""
-    return (scrn.window_height() / 25) * units
-
-
-def wunits2px(scrn, units):
-    """ Returns the px's for a vertical unit (50ths of width)"""
-    return (scrn.window_width() / 50) * units
 
 
 if __name__ == "__main__":
