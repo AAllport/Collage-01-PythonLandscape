@@ -14,5 +14,15 @@ def main():
     screen = charles.screen
 
 
+def vunits2px(scrn, units):
+    """ Returns the px's for a vertical unit (25ths of height)"""
+    return (scrn.window_height() / 25) * units
+
+
+def wunits2px(scrn, units):
+    """ Returns the px's for a vertical unit (50ths of width)"""
+    return (scrn.window_width() / 50) * units
+
+
 if __name__ == "__main__":
     main()
