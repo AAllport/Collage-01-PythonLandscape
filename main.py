@@ -12,6 +12,8 @@ import units
 
 def main():
     """ Main program function, Draws silhouette"""
+    template = [10, 10, 0, 8, 8, 0, 20, 18, 25, 18, 20, 0, 10, 10, 10, 0, 21, 22, 24, 22, 21, 0, 12, 14, 12, 0, 18, 16,
+                20, 0, 20, 22, 24, 0, 0, 8, 8, 7, 8, 7, 10, 12]
     charles = turtle.Turtle()
     screen = charles.screen
     charles.penup()
@@ -19,8 +21,8 @@ def main():
     charles.setheading(0)
     charles.pendown()
     charles.speed(1000)
-    for i in range(units.wu2px(screen, 45)):
-        draw_peak(charles, units.vu2px(screen, 10))
+    for h in template:
+        draw_bar_u(screen, charles, 1, h)
     turtle.done()
 
 
@@ -33,6 +35,11 @@ def draw_peak(drawer, height):
     drawer.right(90)
     drawer.forward(height)
     drawer.left(90)
+
+
+def draw_bar_u(screen, drawer, width, height):
+    for i in range(units.wu2px(screen, width)):
+        draw_peak(drawer, units.vu2px(screen, height))
 
 
 if __name__ == "__main__":
