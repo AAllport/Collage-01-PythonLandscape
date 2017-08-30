@@ -13,5 +13,5 @@ def vu2px(screen, units):
 
 
 def wu2px(screen, units):
-    """ Returns the px's for a vertical unit (50ths of width)"""
+    """ Returns the px's for a horizontal unit (50ths of width)"""
     return int((screen.window_width() / 50) * units)
